@@ -1,2 +1,6 @@
+streamlit
+google-cloud-language
 vaderSentiment
 requests
+pylint
+autopep8

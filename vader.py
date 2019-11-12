@@ -7,6 +7,7 @@ def sentiment_analyzer_scores(text):
     score = analyzer.polarity_scores(text)
     print(text)
     print(score)
+    return score
 
 
 if __name__ == "__main__":
