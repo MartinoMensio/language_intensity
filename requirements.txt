@@ -1,6 +1,8 @@
 streamlit
 google-cloud-language
 vaderSentiment
+textblob
+pycorenlp
 requests
 pylint
 autopep8

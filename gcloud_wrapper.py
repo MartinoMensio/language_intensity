@@ -18,6 +18,7 @@ def analyse_sentences(sentences):
     sentences = [s if s else '#' for s in sentences]
     text = '. '.join(sentences) + '. '
     print(sentences)
+    # TODO: don't aggregate sentences together
     if all([s in cache.keys() for s in sentences]):
         return [cache[k] for k in sentences]
     else:
@@ -50,3 +51,7 @@ def _analyse_text(text):
     # print('Sentiment: {}, {}'.format(sentiment.score, sentiment.magnitude))
     print(sentiment)
     return sentiment
+
+if __name__ == '__main__':
+    res = analyse_sentences(['Hi, How are you?'])
+    print(res)
