@@ -12,6 +12,7 @@ def get_sentiment(text):
                                    'timeout': 5000,
                        })
     print(text)
+    print(res)
     print('Sentiment:', res['sentences'][0]['sentiment'])
     print('Sentiment score:', res['sentences'][0]['sentimentValue'], '/ 4 (0 is most negative, 4 is most positive)')
     print('Sentiment distribution (0-v. negative, 5-v. positive:', res['sentences'][0]['sentimentDistribution'])
@@ -21,6 +22,7 @@ def get_sentiment(text):
         'sentiment': sentence_result['sentiment'],
         'sentimentDistribution': sentence_result['sentimentDistribution'],
         'sentimentTree': sentence_result['sentimentTree'],
+        'parse': res['sentences'][0]['parse']
     }
 
 
