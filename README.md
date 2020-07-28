@@ -19,6 +19,8 @@ virtualenv venv
 pip install -r requirements.txt
 ```
 
+Run `install.sh` to install sentiStrength.
+
 
 ## Run
 

@@ -4,5 +4,7 @@ vaderSentiment
 textblob
 pycorenlp
 requests
+sentistrength
+
 pylint
 autopep8

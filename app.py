@@ -2,7 +2,7 @@
 import streamlit as st
 import pandas as pd
 
-import vader_wrapper, gcloud_wrapper, textblob_wrapper, corenlp_wrapper
+import vader_wrapper, gcloud_wrapper, textblob_wrapper, corenlp_wrapper, sentistrength_wrapper
 
 st.title('Language intensity')
 
@@ -29,11 +29,13 @@ for el in data:
     vader_res = vader_wrapper.sentiment_analyzer_scores(el['w'])
     textblob_res = textblob_wrapper.analyse_sentence(el['w'])
     corenlp_res = corenlp_wrapper.get_sentiment(el['w'])
+    sentistrength_res = sentistrength_wrapper.analyse_sentence(el['w'])
 
     el['vader_sentiment'] = vader_res
     el['textblob'] = textblob_res
     #el['gcloud'] = gcloud_res
     el['corenlp'] = corenlp_res
+    el['sentistrength'] = sentistrength_res
 
 table = pd.DataFrame([el for el in data])
 
